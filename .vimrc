@@ -8,7 +8,6 @@ Plug 'vimwiki/vimwiki'
 Plug 'mhinz/vim-signify'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'lifepillar/vim-solarized8'
 Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()

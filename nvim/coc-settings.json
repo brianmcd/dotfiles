@@ -1,0 +1,4 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["css", "scss", "less", "typescript", "javascript", "typescriptreact", "javascriptreact", "html"],
+  "coc.preferences.jumpCommand": "tabe"
+}
