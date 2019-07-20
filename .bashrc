@@ -29,11 +29,15 @@ alias gb='git branch'
 alias h='systemctl hibernate'
 alias sl='systemctl suspend'
 alias dc='docker-compose'
-alias vim="~/neovim/nvim.appimage"
 
 set -o vi
 
-setxkbmap -option caps:escape
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  setxkbmap -option caps:escape
+  alias vim="~/neovim/nvim.appimage"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  alias vim="nvim"
+fi
 
 source ~/work/dotfiles/tmuxinator.bash
 
