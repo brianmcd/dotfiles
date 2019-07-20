@@ -35,7 +35,7 @@ set -o vi
 
 setxkbmap -option caps:escape
 
-source ~/dotfiles/tmuxinator.bash
+source ~/work/dotfiles/tmuxinator.bash
 
 # Use ag for FZF and have it respect .gitignore.
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
