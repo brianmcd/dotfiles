@@ -14,11 +14,11 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+# font pango:monospace 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 10
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -115,26 +115,47 @@ set $workspace19 "19: Scratch"
 set $workspace20 "20: Scratch"
 
 # Run `xrandr` to get the output names if they change.
-workspace $workspace1 output DVI-D-0
-workspace $workspace2 output DVI-D-0
-workspace $workspace3 output DVI-D-0
-workspace $workspace4 output DVI-D-0
-workspace $workspace5 output DVI-D-0
-workspace $workspace6 output DVI-I-1
-workspace $workspace7 output DVI-I-1
-workspace $workspace8 output DVI-I-1
-workspace $workspace9 output DVI-I-1
-workspace $workspace10 output DVI-I-1
-workspace $workspace11 output DVI-D-0
-workspace $workspace12 output DVI-D-0
-workspace $workspace13 output DVI-D-0
-workspace $workspace14 output DVI-D-0
-workspace $workspace15 output DVI-D-0
-workspace $workspace16 output DVI-I-1
-workspace $workspace17 output DVI-I-1
-workspace $workspace18 output DVI-I-1
-workspace $workspace19 output DVI-I-1
-workspace $workspace20 output DVI-I-1
+#workspace $workspace1 output DP-1
+#workspace $workspace2 output DP-1
+#workspace $workspace3 output DP-1
+#workspace $workspace4 output DP-1
+#workspace $workspace5 output DP-1
+#workspace $workspace6 output DP-1
+#workspace $workspace7 output DP-1
+#workspace $workspace8 output DP-1
+#workspace $workspace9 output DP-1
+#workspace $workspace10 output DP-1
+#workspace $workspace11 output DP-1
+#workspace $workspace12 output DP-1
+#workspace $workspace13 output DP-1
+#workspace $workspace14 output DP-1
+#workspace $workspace15 output DP-1
+#workspace $workspace16 output DP-1
+#workspace $workspace17 output DP-1
+#workspace $workspace18 output DP-1
+#workspace $workspace19 output DP-1
+#workspace $workspace20 output DP-1
+
+workspace $workspace1 output DP-1
+workspace $workspace2 output DP-1
+workspace $workspace3 output DP-1
+workspace $workspace4 output DP-1
+workspace $workspace5 output DP-1
+workspace $workspace6 output HDMI-0
+workspace $workspace7 output HDMI-0
+workspace $workspace8 output HDMI-0
+workspace $workspace9 output HDMI-0
+workspace $workspace10 output HDMI-0
+workspace $workspace11 output DP-1
+workspace $workspace12 output DP-1
+workspace $workspace13 output DP-1
+workspace $workspace14 output DP-1
+workspace $workspace15 output DP-1
+workspace $workspace16 output HDMI-0
+workspace $workspace17 output HDMI-0
+workspace $workspace18 output HDMI-0
+workspace $workspace19 output HDMI-0
+workspace $workspace20 output HDMI-0
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -224,7 +245,6 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        tray_output DVI-I-1
         tray_output primary
 }
 
@@ -242,6 +262,6 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 exec slack
-exec spotify
+exec spotify --force-device-scale-factor=2
 # Multi-monitor desktop setup.
-exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-0 --off --output DVI-I-1 --mode 1680x1050 --pos 1920x0 --rotate normal --output DVI-I-0 --off --output DP-1 --off --output DP-0 --off
+exec --no-startup-id xrandr --output DP-1 --primary --dpi 192 --mode 3840x2160 --pos 0x0 --rotate normal --output DVI-I-1 --off --output HDMI-0 --mode 3840x2160 --pos 3840x0 --rotate normal --output DVI-D-0 --off --off --output DP-0 --off
