@@ -59,6 +59,8 @@ set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%{FugitiveStatusline()}%h
 " Vim replaces files when saving instead of updating them, which breaks docker
 " volume mounts when mounting a single file.
 set backupcopy=yes
+set nomodeline
+set list
 
 filetype plugin indent on
 syntax on
@@ -136,8 +138,6 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-
-autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Use tab/shift+tab to navigate autocomplete options.
 " Below is for deoplete
