@@ -16,5 +16,5 @@ ln -sf `pwd`/.tmux.conf $HOME/.tmux.conf
 
 ln -sf `pwd`/i3 $HOME/.config/i3/config
 
-ln -sf `pwd`/.bashrc-custom $HOME/.bashrc-custom
+ln -sf `pwd`/.bashrc $HOME/.bashrc-custom
 echo "source $HOME/.bashrc-custom" >> $HOME/.bashrc
