@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "coc-angular": "^0.1.0",
+    "coc-css": "^1.2.2",
+    "coc-json": "^1.2.3",
+    "coc-prettier": "^1.1.5",
+    "coc-tslint": "^1.0.17",
+    "coc-tsserver": "^1.3.14"
+  }
+}
