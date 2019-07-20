@@ -38,7 +38,11 @@ set updatetime=750
 set dir=$HOME/.vim/tmp/swap
 if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 
-set rtp+=~/.fzf
+if has('mac')
+  set rtp+=/usr/local/opt/fzf
+else
+  set rtp+=~/.fzf
+endif
 
 set completeopt-=preview " Prevent YouCompleteMe from opening a scratch buffer when completing.
 set clipboard=unnamed
